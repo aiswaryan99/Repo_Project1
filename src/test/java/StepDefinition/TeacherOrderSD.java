@@ -1,6 +1,7 @@
 package StepDefinition;
 
 import Pages.AfterLoginPage;
+import Pages.StudentFlyerOrder;
 import Pages.YourTeacherOrder;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
@@ -10,6 +11,7 @@ public class TeacherOrderSD {
 
     AfterLoginPage apage = new AfterLoginPage();
     YourTeacherOrder ypage = new YourTeacherOrder();
+    StudentFlyerOrder spage = new StudentFlyerOrder();
 
     @Then("^I click on 'Your Teacher Order' under 'Enter Orders' tab$")
     public void clickOnYourTeacherOrder() {
@@ -36,7 +38,7 @@ public class TeacherOrderSD {
                 "Different message is displayed!");
     }
 
-    @Then("^I enter '(.+)' in qty box$")
+    @Then("^I enter '(.+)' in qty box on YTO page$")
     public void enterValueInQtyBox(String qty) {
         ypage.enterQtyNum(qty);
     }
@@ -50,4 +52,5 @@ public class TeacherOrderSD {
     public void popUpMsgNotPresent() {
         ypage.otherQtyBox();
     }
+
 }

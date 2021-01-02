@@ -19,7 +19,8 @@ public class ScholasticCreateSD extends BasePage {
 
     @Given("^I am on landing page$")
     public void verifyLandingPage() {
-        Assert.assertEquals(Web.getDriver().getTitle(), "Scholastic Book Clubs | Children's Books for Parents and Teachers");
+        Assert.assertEquals(Web.getDriver().getTitle(),
+                "Scholastic Book Clubs | Children's Books for Parents and Teachers");
     }
 
     @When("^I click on Create an Account$")

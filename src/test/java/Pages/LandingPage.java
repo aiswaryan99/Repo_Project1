@@ -33,12 +33,11 @@ public class LandingPage extends BasePage {
     By readLevelBox = By.xpath("//div[@class='selected-option input-select required']");
     By grloption = By.xpath("//li[@class='custom-option select-option']//span[1]");
     By continueButton = By.xpath("//button[@class='button-continue']");
-    By searchByStateBox = By.xpath("//div[@class='selected-option input-select']");
-    By nyStateList = By.xpath("//li[@class='custom-option select-option' and contains(@data-label,'new york')]");
-    //By nyStateList = By.xpath("//option[@class='default-option' and contains(text(),'Select School State')]/following-sibling::option");
-    By cityBox =By.xpath("//input[@id='dwfrm_myschool_schoolcity']");
-    //By nyCityBox = By.xpath("//span[@class='auto-matches' and contains(text(),' New York')]");
-    By nyCityBox=By.xpath("//li[@class='custom-option select-option']*[contains(text(),' New York')]");
+    By stateField= By.xpath("//div[@class='selected-option input-select selected-active']");
+    By selectStateDrpDwn = By.xpath("//li[@class='custom-option select-option']/span");
+    By cityElem = By.xpath("//li[@class='custom-option select-option']/*[contains(text(), ' New York')]");
+    By cityField = By.name("dwfrm_myschool_schoolcity");
+    By selectCity = By.xpath("//li[@class='ui-menu-item']");
     By search = By.xpath("//button[@class='button-continue']");
     By schoolAddress = By.xpath("//div[@class='school-selection']");
 
@@ -144,13 +143,13 @@ public class LandingPage extends BasePage {
     }
 
     public void searchByState(String state){
-        clickThis(searchByStateBox);
-        selectFromSuggestions(nyStateList,state);
+        clickThis(stateField);
+        selectFromSuggestions(selectStateDrpDwn,state);
     }
 
     public void searchCity(String city){
-        typeText(cityBox,city);
-        clickThis(nyCityBox);
+        typeText(cityField,city);
+        selectFromSuggestions(cityElem,city);
     }
 
     public void clickS(){

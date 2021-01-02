@@ -7,7 +7,7 @@ Feature: Create Account
     Then I select 'Mrs.' in Title dropdown
     And I enter first name as 'Aiswarya'
     And I enter last name as 'Nair'
-    And I enter email as 'babydoll6326@gmail.com'
+    And I enter email as 'dollbaby7516@gmail.com'
     And I enter password as 'testing123'
     And I click the box for terms and accept
     Then I click on Next button
@@ -62,8 +62,8 @@ Feature: Create Account
         And I verify the school address is present and is the same as created
 
     Scenario: User can create a new teacher account in taxable state using School Search
-      Then I click ' New York' as state
-        And I click on ' New York' as city
+      Then I click 'New York' as state
+        And I click on 'New York' as city
         And I click on Search Button
       Then I enter 'SCHOLASTIC' School Name field
         And I click on 'SCHOLASTIC+BOOK+CLUBS'

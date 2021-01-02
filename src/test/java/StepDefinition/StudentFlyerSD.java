@@ -32,7 +32,7 @@ StudentFlyerOrder spage = new StudentFlyerOrder();
     }
 
     @And("^I click on add button$")
-    public void clickOnAddButton() {
+    public void clickOnAddButton() throws InterruptedException {
         spage.addButton();
     }
 
@@ -43,4 +43,20 @@ StudentFlyerOrder spage = new StudentFlyerOrder();
                 "Different message is displayed in pop-up message!");
     }
 
+    @Then("^I click on 'x' button$")
+    public void clickOnXButton() {
+        spage.clickX();
+    }
+
+    @And("^I verify total quantity before clicking x button$")
+    public void verifyTotalQuantityBeforeClickingXButton() {
+        Assert.assertEquals(spage.actualQuantityBefore(),spage.getPreviousQuantity(),
+                "Total quantity number displayed is incorrect!");
+    }
+
+    @And("^I verify the total quantity has lowered after clicking x$")
+    public void verifyTheTotalQuantityHasLoweredAfterClickingX() {
+        Assert.assertEquals(spage.actualQuantityAfter(),spage.getAfterQuantity(),
+                "Total quantity displayed is incorrect!");
+    }
 }

@@ -34,6 +34,9 @@ public class YourTeacherOrder extends BasePage{
     public void enterQtyNum(String num){
         typeText(qtyBox1,num);
     }
+    public void enterQtyNum2(String num){
+        typeText(qtyBox2,num);
+    }
 
     public void close(){
         clickThis(xBox);

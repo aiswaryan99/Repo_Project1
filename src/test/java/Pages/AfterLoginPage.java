@@ -32,7 +32,6 @@ public class AfterLoginPage extends BasePage{
     }
 
     public void hoverEnterOrders(){
-        waitUntilClickable(notificationClose);
         hoverOver(enterOrders);
     }
 
