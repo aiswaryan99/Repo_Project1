@@ -1,7 +1,9 @@
+@Taxes
 Feature: Taxes
 
   Background: Given I am on Login Page
 
+  @Taxes-1
   Scenario: Verify zero tax for only SFO order in the checkout
       Then I enter scholastic account email as 'joseram5656@gmail.com'
         And I enter scholastic password as 'testing123'
@@ -33,6 +35,7 @@ Feature: Taxes
       Then I click on 'Proceed to Checkout' button again
       Then I verify if the tax amount is equal to zero
 
+  @Taxes-2
   Scenario: Verify non-zero tax is present for SFO-YTO orders in the checkout for teacher with tax state school
     Then I enter scholastic account email as 'joseram5656@gmail.com'
       And I enter scholastic password as 'testing123'
@@ -56,6 +59,7 @@ Feature: Taxes
       And I click on 'Proceed to Checkout' button again
     Then I verify the tax amount is greater than zero
 
+  @Taxes-3
   Scenario: Verify zero tax for SFO-YTO orders in the checkout for teacher with non-tax state school
     Then I enter scholastic account email as 'coldsnowman3434@gmail.com'
       And I enter scholastic password as 'testing123'

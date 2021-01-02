@@ -1,5 +1,7 @@
+@Recommend
 Feature: Recommended Books
 
+  @Recommend-1
   Scenario: Teacher can add books in Recommendations List from Quick View
       Given I am on Login Page
         Then I enter scholastic account email as 'aiswaryan777@gmail.com'

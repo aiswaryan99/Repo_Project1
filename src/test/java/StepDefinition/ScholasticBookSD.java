@@ -25,7 +25,7 @@ public class ScholasticBookSD {
          lpage.enterEmail(email);
     }
 
-    @And("^I enter scholastic password as '(.+)'$")
+    @Then("^I enter scholastic password as '(.+)'$")
         public void enterPass(String pass){
         lpage.enterPassword(pass);
     }
@@ -40,7 +40,7 @@ public class ScholasticBookSD {
         bpage.enterTextIntoSearch(value);
     }
 
-    @And("^I click on magnifying glass button$")
+    @Then("^I click on magnifying glass button$")
         public void clickOnSearch(){
         bpage.search();
     }
@@ -55,17 +55,17 @@ public class ScholasticBookSD {
         bpage.recommendStar();
     }
 
-    @And("^I click on the Recommendations to Students Box$")
+    @Then("^I click on the Recommendations to Students Box$")
     public void clickRecommendBox(){
         bpage.recommendBox();
     }
 
-    @And("^I click on x button to close$")
+    @Then("^I click on x button to close$")
     public void closeAddRecBox(){
         bpage.closeAddBox();
     }
 
-    @And("^I click on x to close quick look$")
+    @Then("^I click on x to close quick look$")
     public void closeQuickLook(){
         bpage.closeQLBox();
     }
@@ -75,7 +75,7 @@ public class ScholasticBookSD {
         bpage.MyLists();
     }
 
-    @And("^I click on Recommendations to Students from the dropdown$")
+    @Then("^I click on Recommendations to Students from the dropdown$")
     public void clickRecommendationsForStudents(){
         bpage.recommendationsOption();
     }

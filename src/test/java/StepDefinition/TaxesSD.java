@@ -8,7 +8,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import org.testng.Assert;
 
-public class TaxesSD extends BasePage {
+public class TaxesSD {
 
     StudentFlyerOrder spage = new StudentFlyerOrder();
     Checkout cpage = new Checkout();
@@ -61,12 +61,12 @@ public class TaxesSD extends BasePage {
                 "The tax is greater that zero!");
     }
 
-    @And("^I click on one box to change the quantity of book one to '(.+)'$")
+    @Then("^I click on one box to change the quantity of book one to '(.+)'$")
     public void changeQuantityOfFirstBook(String num) {
         ypage.enterQtyNum(num);
     }
 
-    @And("^I click on one box to change the quantity of book two to '(.+)'$")
+    @Then("^I click on one box to change the quantity of book two to '(.+)'$")
     public void changeQuantityOfSecondBook(String num) {
         ypage.enterQtyNum2(num);
     }

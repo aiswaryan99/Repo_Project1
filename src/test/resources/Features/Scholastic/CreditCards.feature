@@ -1,5 +1,7 @@
+@CreditCards
 Feature: Credit Cards
 
+  @CreditCards-1
   Scenario: Verify teacher can add only 3 credit cards under My Credit Cards in My Accounts
    Given I am on Login Page
      Then I enter scholastic account email as 'aiswaryan777@gmail.com'

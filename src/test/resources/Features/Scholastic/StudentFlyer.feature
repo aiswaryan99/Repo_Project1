@@ -1,7 +1,10 @@
+@InvalidItemNum @Delete
+
 Feature: Student Flyer Order
 
   Background: Given I am on Login Page
 
+  @InvalidItemNum-1
   Scenario: Verify teacher gets error for invalid item number in SFO (Student Flyer Order)
       Then I enter scholastic account email as 'aiswaryan777@gmail.com'
         And I enter scholastic password as 'gokulam1'
@@ -13,6 +16,7 @@ Feature: Student Flyer Order
         And I click on add button
       Then I verify the pop-up message 'Please enter a valid item number.'
 
+  @Delete
   Scenario: Verify user can delete item on Cart page
       Then I enter scholastic account email as 'joseram5656@gmail.com'
         And I enter scholastic password as 'testing123'

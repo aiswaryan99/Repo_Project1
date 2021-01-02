@@ -1,3 +1,4 @@
+@CreateAccount
 Feature: Create Account
 
   Background: Given I am on landing page
@@ -12,6 +13,7 @@ Feature: Create Account
     And I click the box for terms and accept
     Then I click on Next button
 
+  @CreateAccount-1  @sanity
   Scenario: Verify CLASS CODE allocated to the teacher is present on Home-Page and MyAccount-Page
     When I click on Create an Account
     And I click on Teacher/Administrator/Homeschooler
@@ -36,6 +38,7 @@ Feature: Create Account
         And I click on Continue to Site button
       Then I obtain class code after logging in
 
+    @CreateAccount-2 @sanity
     Scenario: Verify Same Class Code on Home Page and My Account Page
       Then I enter scholastic account email as 'badboy125@gmail.com'
         And I enter scholastic password as 'testing123'
@@ -45,6 +48,7 @@ Feature: Create Account
         And I verify the teacher's name is present and is the same as created
         And I verify the school address is present and is the same as created
 
+  @CreateAccount-3 @sanity
   Scenario: User can create a new teacher account in non-taxable state using Zip Code
       Then I enter zipcode as '99518'
         And I click on search button
@@ -61,6 +65,7 @@ Feature: Create Account
         And I verify the teacher's name is present and is the same as created
         And I verify the school address is present and is the same as created
 
+    @CreateAccount-4 @sanity
     Scenario: User can create a new teacher account in taxable state using School Search
       Then I click 'New York' as state
         And I click on 'New York' as city

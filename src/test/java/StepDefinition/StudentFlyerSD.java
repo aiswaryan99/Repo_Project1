@@ -16,7 +16,7 @@ StudentFlyerOrder spage = new StudentFlyerOrder();
         apage.hoverEnterOrders();
     }
 
-    @And("^I click on 'Student Flyer Orders' under 'Enter Orders' tab$")
+    @Then("^I click on 'Student Flyer Orders' under 'Enter Orders' tab$")
     public void clickOnSFO(){
         apage.clickOnStudentFlyerOrders();
     }
@@ -26,12 +26,12 @@ StudentFlyerOrder spage = new StudentFlyerOrder();
         spage.studentName(stName);
     }
 
-    @And("^I enter '(.+)' as the item number$")
+    @Then("^I enter '(.+)' as the item number$")
     public void enterItemNumber(String num) {
         spage.itemNumber(num);
     }
 
-    @And("^I click on add button$")
+    @Then("^I click on add button$")
     public void clickOnAddButton() throws InterruptedException {
         spage.addButton();
     }
@@ -48,7 +48,7 @@ StudentFlyerOrder spage = new StudentFlyerOrder();
         spage.clickX();
     }
 
-    @And("^I verify total quantity before clicking x button$")
+    @Then("^I verify total quantity before clicking x button$")
     public void verifyTotalQuantityBeforeClickingXButton() {
         Assert.assertEquals(spage.actualQuantityBefore(),spage.getPreviousQuantity(),
                 "Total quantity number displayed is incorrect!");

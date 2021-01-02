@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 
 public class BasePage {
 
-    public WebElement findElementUsingFluentWait(By locator) {
+    public WebElement findElementUsingFluentWait(final By locator) {
         Wait fWait = new FluentWait(Web.getDriver())
                 .withTimeout(Duration.ofSeconds(30))
                 .pollingEvery(Duration.ofSeconds(1))

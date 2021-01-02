@@ -1,7 +1,9 @@
+@Checkout @regression
 Feature: Checkout
 
   Background:Given I am on Login Page
 
+  @Checkout-1
   Scenario: Verify teacher can add multiple books for a student in SFO
       Then I enter scholastic account email as 'aiswaryan777@gmail.com'
         And I enter scholastic password as 'gokulam1'
@@ -40,6 +42,7 @@ Feature: Checkout
         And I verify student total is correct as present
         And I verify total amount is correct as present
 
+  @Checkout-2
   Scenario: Verify teacher can add multiple books for multiple students in SFO
     Then I enter scholastic account email as 'joseram5656@gmail.com'
       And I enter scholastic password as 'testing123'

@@ -1,13 +1,12 @@
 package StepDefinition;
 
-import Pages.BasePage;
 import Pages.Checkout;
 import Pages.StudentFlyerOrder;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import org.testng.Assert;
 
-public class CheckoutSD extends BasePage {
+public class CheckoutSD {
     StudentFlyerOrder spage = new StudentFlyerOrder();
     Checkout cpage = new Checkout();
 
@@ -52,31 +51,31 @@ public class CheckoutSD extends BasePage {
                 "The item number 16B3 is not present!");
     }
 
-    @And("^I verify the item number '(.+)' is 2nd present on 'Review Your Cart' Page$")
+    @Then("^I verify the item number '(.+)' is 2nd present on 'Review Your Cart' Page$")
     public void verifyItemNum2Present(String item) {
         Assert.assertEquals(cpage.getItemNum2(),item,
                 "The item number 35N3 is not present!");
     }
 
-    @And("^I verify the item number '(.+)' is present 3rd on 'Review Your Cart' Page$")
+    @Then("^I verify the item number '(.+)' is present 3rd on 'Review Your Cart' Page$")
     public void verifyItemNum3Present(String item) {
         Assert.assertEquals(cpage.getItemNum3(),item,
                 "The item number 35J3 is not present!");
     }
 
-    @And("^I verify the qty number '(.+)' is present for book 16B3$")
+    @Then("^I verify the qty number '(.+)' is present for book 16B3$")
     public void verifyQtyNum1IsPresent(String qty) {
         Assert.assertEquals(cpage.getQtyNum1(),qty,
                 "Same quantity is not present as input!");
     }
 
-    @And("^I verify the qty number '(.+)' is present for book 35N3$")
+    @Then("^I verify the qty number '(.+)' is present for book 35N3$")
     public void verifyQtyNum2IsPresent(String qty) {
         Assert.assertEquals(cpage.getQtyNum2(),qty,
                 "Same quantity is not present as input!");
     }
 
-    @And("^I verify the qty number '(.+)' is present for book 35J3$")
+    @Then("^I verify the qty number '(.+)' is present for book 35J3$")
     public void verifyQtyNum3IsPresent(String qty) {
         Assert.assertEquals(cpage.getQtyNum3(),qty,
                 "Same quantity is not present as input!");
@@ -118,7 +117,7 @@ public class CheckoutSD extends BasePage {
                 "Incorrect Student Total is present on checkout page!");
     }
 
-    @And("^I verify total amount is correct as present$")
+    @Then("^I verify total amount is correct as present$")
     public void verifyCorrectTotalPresent() {
         Assert.assertEquals(cpage.calculateSumValue(),cpage.actualTotalSummary(),
                 "Incorrect Summary Total present on checkout page!");
@@ -131,17 +130,17 @@ public class CheckoutSD extends BasePage {
         cpage.stNames();
     }
 
-    @And("^I verify all item numbers are present after adding them$")
+    @Then("^I verify all item numbers are present after adding them$")
     public void verifyAllItemNumbersArePresent() {
         cpage.itemNums();
     }
 
-    @And("^I verify all quantity numbers are present after adding them$")
+    @Then("^I verify all quantity numbers are present after adding them$")
     public void verifyAllQuantityNumbersArePresent() {
         cpage.quantityNums();
     }
 
-    @And("^I verify summary total is correct as present$")
+    @Then("^I verify summary total is correct as present$")
     public void verifySummaryTotalIsCorrect() {
         Assert.assertEquals(cpage.actualTotalSummary(),cpage.calculateSumValue(),
                 "The Summary Total that is present is incorrect!");

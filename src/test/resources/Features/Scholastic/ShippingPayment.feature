@@ -1,5 +1,7 @@
+@Shipping
 Feature: Shipping and Payment
 
+  @Shipping-1
   Scenario: Verify user can place an order by adding a new credit card
     Given I am on Login Page
       Then I enter scholastic account email as 'joseram5656@gmail.com'

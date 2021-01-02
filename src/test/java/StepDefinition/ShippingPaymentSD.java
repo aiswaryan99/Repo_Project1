@@ -21,7 +21,7 @@ public class ShippingPaymentSD {
         spage.clickSelectPayment();
     }
 
-    @And("^I click on 'Credit Card' on dropdown$")
+    @Then("^I click on 'Credit Card' on dropdown$")
     public void clickOnCreditCard() {
         spage.clickCreditCard();
     }
@@ -31,7 +31,7 @@ public class ShippingPaymentSD {
         spage.clickSelectCard();
     }
 
-    @And("^I click on 'Add a New Card' from dropdown$")
+    @Then("^I click on 'Add a New Card' from dropdown$")
     public void clickOnAddANewCard() {
         spage.clickAddNew();
     }
@@ -53,7 +53,7 @@ public class ShippingPaymentSD {
                 "The incorrect message is displayed!");
     }
 
-    @And("^I verify the order receipt reference number is displayed$")
+    @Then("^I verify the order receipt reference number is displayed$")
     public void verifyTheOrderReceiptReferenceNumberIsPresent() {
         Assert.assertTrue(spage.orderReceiptNumIsDisplayed(),
                 "The order receipt reference number is not displayed!");

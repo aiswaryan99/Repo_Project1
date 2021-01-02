@@ -11,7 +11,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
 
-public class ScholasticCreateSD extends BasePage {
+public class ScholasticCreateSD {
 
     LandingPage lpage = new LandingPage();
     AfterLoginPage apage = new AfterLoginPage();
@@ -28,12 +28,12 @@ public class ScholasticCreateSD extends BasePage {
         lpage.clickCreateAccount();
     }
 
-    @And("^I click on Teacher/Administrator/Homeschooler$")
+    @Then("^I click on Teacher/Administrator/Homeschooler$")
     public void clickTeachAdmin() {
         lpage.clickOnTeacherAdmin();
     }
 
-    @And("^I click on Next Button$")
+    @Then("^I click on Next Button$")
     public void clickOnNextButton() {
         lpage.setClickOnNextButton();
     }
@@ -43,27 +43,27 @@ public class ScholasticCreateSD extends BasePage {
         lpage.selectTitleDropdown(title);
     }
 
-    @And("^I enter first name as '(.+)'$")
+    @Then("^I enter first name as '(.+)'$")
     public void firstName(String name) {
         lpage.firstName(name);
     }
 
-    @And("^I enter last name as '(.+)'$")
+    @Then("^I enter last name as '(.+)'$")
     public void lastName(String lname) {
         lpage.lastName(lname);
     }
 
-    @And("^I enter email as '(.+)'$")
+    @Then("^I enter email as '(.+)'$")
     public void enterEmailAdd(String email) {
         lpage.enterEmail(email);
     }
 
-    @And("^I enter password as '(.+)'$")
+    @Then("^I enter password as '(.+)'$")
     public void enterPassword(String pass) {
         lpage.enterPass(pass);
     }
 
-    @And("^I click the box for terms and accept$")
+    @Then("^I click the box for terms and accept$")
     public void clickOnCheckBox() {
         lpage.clickBox();
     }
@@ -78,7 +78,7 @@ public class ScholasticCreateSD extends BasePage {
         lpage.enterZip(zipcode);
     }
 
-    @And("^I click on search button$")
+    @Then("^I click on search button$")
     public void clickOnSearchButton() {
         lpage.clickSearchButton();
     }
@@ -88,7 +88,7 @@ public class ScholasticCreateSD extends BasePage {
         lpage.typeSchoolName(name);
     }
 
-    @And("^I click on '(.+)'$")
+    @Then("^I click on '(.+)'$")
     public void clickSchool(String school) {
         lpage.selectSchoolName(school);
     }
@@ -108,12 +108,12 @@ public class ScholasticCreateSD extends BasePage {
         lpage.pickGrade(grade);
     }
 
-    @And("^I enter number of students as '(.+)'$")
+    @Then("^I enter number of students as '(.+)'$")
     public void enterNumStudents(String num){
         lpage.numS(num);
     }
 
-    @And("^I click on the next button$")
+    @Then("^I click on the next button$")
     public void clickOnRoleNext(){
         lpage.nextAgainRole();
     }
@@ -123,7 +123,7 @@ public class ScholasticCreateSD extends BasePage {
         lpage.selectRead(level);
     }
 
-    @And("^I click on Continue to Site button$")
+    @Then("^I click on Continue to Site button$")
     public void clickContinueToSite(){
         lpage.continueToSiteButton();
     }
@@ -133,7 +133,7 @@ public class ScholasticCreateSD extends BasePage {
         return apage.getClassCode();
     }
 
-    @And("^I obtain class code from my account page$")
+    @Then("^I obtain class code from my account page$")
     public void verifyClassCodeMyAccount() {
         apage.myAccountBox();
         apage.myProfileBox();
@@ -146,13 +146,13 @@ public class ScholasticCreateSD extends BasePage {
                 "The class codes on Home Page and My Account Page are different");
     }
 
-    @And("^I verify the teacher's name is present and is the same as created$")
+    @Then("^I verify the teacher's name is present and is the same as created$")
     public void verifyTeacherName(){
         mpage.teacherNameIsPresent();
         Assert.assertEquals(mpage.teacherName(),"Mrs. Aiswarya Nair","The teacher's name is not as created");
     }
 
-    @And ("^I verify the school address is present and is the same as created$")
+    @Then ("^I verify the school address is present and is the same as created$")
     public void verifySchoolAddress(){
         mpage.schoolAddressIsPresent();
         Assert.assertEquals(mpage.schoolAddressText(),
@@ -166,12 +166,12 @@ public class ScholasticCreateSD extends BasePage {
         lpage.searchByState(state);
     }
 
-    @And("^I click on '(.+)' as city$")
+    @Then("^I click on '(.+)' as city$")
     public void clickCity(String city){
         lpage.searchCity(city);
     }
 
-    @And("^I click on Search Button$")
+    @Then("^I click on Search Button$")
     public void clickOnSearch(){
         lpage.clickS();
     }

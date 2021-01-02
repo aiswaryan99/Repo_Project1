@@ -43,7 +43,7 @@ public class TeacherOrderSD {
         ypage.enterQtyNum(qty);
     }
 
-    @And("^I close the pop-up message$")
+    @Then("^I close the pop-up message$")
     public void closePopUpMsg() {
         ypage.close();
     }
